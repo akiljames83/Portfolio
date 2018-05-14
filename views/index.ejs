@@ -120,6 +120,14 @@
     @media only screen and (max-width: 300px) {
       .prev, .next,.text {font-size: 11px}
     }
+    #title {
+      font-size:4.2em;
+    }
+    @media all and (max-width: 600px) {
+        #title {
+            font-size:2.5em;
+        }
+    }
     </style>
 
   </head>
@@ -212,7 +220,7 @@
           <span class="dot" onclick="currentSlide(2)" style="display:none"></span> 
           <span class="dot" onclick="currentSlide(1)" style="display:none"></span>
         </div>
-        <h1 class="text-uppercase mb-0" style="font-size: 4.2em;">Welcome to my Portfolio</h1>
+        <h1 class="text-uppercase mb-0" id="title" >Welcome to my Portfolio</h1>
         <hr class="star-light">
         <h2 class="font-weight-light mb-0">Data Science - Machine Learning - Web Development</h2>
       </div>
