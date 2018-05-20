@@ -18,15 +18,22 @@ app.use(flash());
 var transporter = nodemailer.createTransport({
  service: 'gmail',
  auth: {
-        user: 'akil.james83@gmail.com',
-        pass: 'eightythree#83'
+        user: 'akilportfolio@gmail.com',
+        pass: 'akilportfolio1'
     }
 });
-
+// Personalized Emails:
+var d = new Date();
+var Month= d.getMonth() + 1;
+var Day = d.getDate();
+var Year = d.getFullYear();
+var hour = d.getHours();
+var minute = d.getMinutes();
+var date = 'at: '+ String(Month)+ '/'+ String(Day)+'/' + String(Year) +' '+ String(hour)+':' + String(pad(minute,2));
 var mailOptions = {
-  from: 'akil.james83@gmail.com', // sender address
-  to: 'akil.james83@gmail.com', // list of receivers
-  subject: 'Message from Portfolio Page', // Subject line
+  from: 'akilportfolio@gmail.com', // sender address
+  to: 'akilportfolio@gmail.com', // list of receivers
+  subject: 'Message from Portfolio Page ' + date, // Subject line
   html: '<p>Your html here</p>'// plain text body
 };
 
@@ -75,3 +82,10 @@ app.post("/", function(req, res){
 app.listen(process.env.PORT, process.env.IP, function(){
    console.log("Akil's portfolio site is being served!");
 });
+
+// Function
+function pad(n, width, z) {
+  z = z || '0';
+  n = n + '';
+  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
