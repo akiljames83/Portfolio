@@ -16,17 +16,17 @@ app.use(flash());
 
 
 var transporter = nodemailer.createTransport({
- service: 'Yahoo',
+ service: 'gmail',
  auth: {
-        user: 'akil_great@rogers.com',
-        pass: 'jacob8'
+        user: 'akil.james83@gmail.com',
+        pass: 'eightythree#83'
     }
 });
 
 var mailOptions = {
-  from: 'akil_great@rogers.com', // sender address
-  to: 'akil_great@rogers.com', // list of receivers
-  subject: 'Message from Portfolio web-page', // Subject line
+  from: 'akil.james83@gmail.com', // sender address
+  to: 'akil.james83@gmail.com', // list of receivers
+  subject: 'Message from Portfolio Page', // Subject line
   html: '<p>Your html here</p>'// plain text body
 };
 
