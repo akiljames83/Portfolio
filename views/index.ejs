@@ -234,7 +234,37 @@
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
+              <img class="img-fluid" src="img/portfolio/Socialoo.png" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-7">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/HaarCascade1.png" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-8">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/ssd.png" alt="">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-9">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/coming_soon.png" alt="">
             </a>
           </div>
         </div>
@@ -513,7 +543,98 @@ to add a slight blurring affect to the pixels as they moved. The github reposito
         <div class="container text-center">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Stay Tuned ...</h2>
+              <h2 class="text-secondary text-uppercase mb-0">Socialoo</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="img/projects/event.png" alt="">
+              <p class="mb-5" style="text-align: justify;">Socialoo was an application that I built for EngHack 2018. This project was a C-Optomized Multi-threaded Machine Learning App that would
+              scrape a user's tweets, and then using sentiment analysis, determine the personality of the individual based on their tweets. Subsequently, the script would access Waterloo's Open Data
+              website which contains a list of activities in Waterloo with a description. Sentiment analysis was perfromed on these activites as well, and activites matching up with user personalities
+              were depicted. The github repository for my code can be found<a href="https://github.com/akiljames83/enghack2018" target="_blank"> here</a> and a link to our devpost can be found
+              <a href="https://devpost.com/software/socialoo" target="_blank"> here</a>. 
+              <br><br><b>Technologies Used:</b> Flask, C++, Cython, HTML, CSS, JS, jQuery
+              <br><br><b>APIs Used:</b> Indicoio, TwitterAPI, City of Waterloo Open Data
+              </p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Portfolio Modal 7 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-7">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Face & Smile Detection</h2>
+              <hr class="star-dark mb-5">
+              <video width="700" height="400" controls>
+                <source src="img/projects/detection.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <br>
+              <p class="mb-5" style="text-align: justify;">This is a small project I created using openCV and Haar Cascades. 
+              The script looks for faces in a video and then overlays rectangles on the face, eyes and a smile, if visible.
+              The program is not extremely precise, however, I hope to tweek perameters in the future and possibly use SSD instead of Haar Cascades which are less accurate.
+              The github repository for my code can be found<a href="https://github.com/akiljames83/face-smile-detector-opencv" target="_blank"> here </a>. 
+              <br><br><b>Technologies Used:</b> Python, OpenCV, and Face/Eye/Smile Haar Cascades.
+              </p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Portfolio Modal 8 https://github.com/akiljames83/open-cv-course-ssd-->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-8">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Single Shot MultiBox Detection</h2>
+              <hr class="star-dark mb-5">
+              <video width="700" height="400" controls>
+                <source src="img/projects/labeled_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <br>
+              <p class="mb-5" style="text-align: justify;">
+              The video above is of a dog running in a backyard that has been processed with my script. I added the class label and percentage accuracy above all images detected.
+              <br><br>
+              This is a code-along project I did as part of the Machine Vision A-Z Udemy Course. This project
+              allows me to perform Single Shoot Multibox Detection on a video by processing the frames one by one and searching for 1 of 40 classes of images throughout
+              the frame. In future, I plan on making my own custom script on a model that I trained myself, however, this would require a very good GPU which I do not currently have.
+              The github repository for my code can be found<a href="https://github.com/akiljames83/open-cv-course-ssd" target="_blank"> here </a>.
+              <br><br><b>Technologies Used:</b> Python and SSD Pre-Trained Model.
+              </p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Portfolio Modal 9 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-9">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Stay Tuned for a GAN Project</h2>
               <hr class="star-dark mb-5">
               <img class="img-fluid mb-5" src="img/portfolio/submarine.png" alt="">
               <p class="mb-5" style="text-align: justify;">New project coming soon :]</p>
