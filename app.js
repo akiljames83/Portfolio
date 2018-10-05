@@ -1,6 +1,7 @@
 var express = require('express'),
     app     = express(),
     bodyParser  = require("body-parser"),
+    cmd         = require('node-cmd'),
     nodemailer  = require("nodemailer"),
     flash       = require('connect-flash');
 
@@ -58,25 +59,21 @@ app.post("/", function(req, res){
     // get data from form and add to campgrounds array
     var name = req.body.name;
     var email = req.body.email;
-    if (req.body.phone) {
-        var phone = req.body.phone;
-    }
+    var phone = req.body.phone;
     var message = req.body.message;
     
-    var sendThis = "<p> Email sent from " + name + '.</p><br>';
-    if(phone){
-        sendThis += '<p> Their phone number is ' + phone + '.</p><br>';
-    }
-    sendThis += '<p> Their email is ' +email + ' .</p> <br>';
-    sendThis += '<p> Their message is "' + message + '".</p><br> <p><center>End of message</center></p>';
+    var print = name + '\n' + phone + '\n' + email + '\n' + message + '\n' + '\t--- END OF FORM ---\n\n';
+    var command = 'echo "'+print+'" >> form.txt' ;
+    cmd.run(command);
+    
+    console.log(print);
     
     //mailOptions.to = email;
-    mailOptions.html = sendThis;
+    // mailOptions.html = print;
     
-    sendit();
+    // sendit();
     //req.flash('success', 'Message sent successfully!');
     res.redirect('/');
-    console.log(sendThis)
 });
 
 app.listen(process.env.PORT, process.env.IP, function(){
