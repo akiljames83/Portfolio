@@ -1,5 +1,5 @@
-var express = require('express'),
-    app     = express(),
+var express     = require('express'),
+    app         = express(),
     bodyParser  = require("body-parser"),
     cmd         = require('node-cmd'),
     nodemailer  = require("nodemailer"),
