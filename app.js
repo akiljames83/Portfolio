@@ -1,7 +1,7 @@
 var express     = require('express'),
     app         = express(),
     bodyParser  = require("body-parser"),
-    cmd         = require('node-cmd'),
+    //cmd         = require('node-cmd'),
     nodemailer  = require("nodemailer"),
     flash       = require('connect-flash');
 
@@ -21,8 +21,8 @@ var transporter = nodemailer.createTransport({
  host: 'smtp.gmail.com',
  port: 465,
  secure: true,
- socketTimeout: 5000,
- logger: true,
+ //socketTimeout: 5000,
+ //logger: true,
  auth: {
         user: 'akilportfolio@gmail.com',
         pass: 'akilportfolio1'
@@ -68,12 +68,13 @@ app.post("/", function(req, res){
     var message = req.body.message;
     
     var print = name + '\n' + phone + '\n' + email + '\n' + message + '\n' + '\t--- END OF FORM ---\n\n';
-    var command = 'echo "'+print+'" >> form.txt' ;
-    cmd.run(command);
+    //var command = 'echo "'+print+'" >> form.txt' ;
+    //cmd.run(command);
     
     console.log(print);
     
-    mailOptions.to = email;
+    mailOptions.from = email;
+    mailOptions.to = 'akil.james83@gmail.com';//email;
     mailOptions.html = print;
     
     sendit();
