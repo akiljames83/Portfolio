@@ -38,7 +38,7 @@ var minute = d.getMinutes();
 var date = 'at: '+ String(Month)+ '/'+ String(Day)+'/' + String(Year) +' '+ String(hour)+':' + String(pad(minute,2));
 var mailOptions = {
   from: 'akilportfolio@gmail.com', // sender address
-  to: 'akilportfolio@gmail.com', // list of receivers
+  to: 'akilportfolio@gmail.com, akil.james83@gmail.com', // list of receivers
   subject: 'Message from Portfolio Page ' + date, // Subject line
   html: '<p>Your html here</p>'// plain text body
 };
@@ -73,8 +73,8 @@ app.post("/", function(req, res){
     
     console.log(print);
     
-    mailOptions.from = email;
-    mailOptions.to = 'akil.james83@gmail.com';//email;
+    //mailOptions.from = email;
+    //mailOptions.to = 'akil.james83@gmail.com';//email;
     mailOptions.html = print;
     
     sendit();
