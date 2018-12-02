@@ -18,6 +18,11 @@ app.use(flash());
 
 var transporter = nodemailer.createTransport({
  service: 'gmail',
+ host: 'smtp.gmail.com',
+ port: 465,
+ secure: true,
+ socketTimeout: 5000,
+ logger: true,
  auth: {
         user: 'akilportfolio@gmail.com',
         pass: 'akilportfolio1'
@@ -68,10 +73,10 @@ app.post("/", function(req, res){
     
     console.log(print);
     
-    //mailOptions.to = email;
-    // mailOptions.html = print;
+    mailOptions.to = email;
+    mailOptions.html = print;
     
-    // sendit();
+    sendit();
     //req.flash('success', 'Message sent successfully!');
     res.redirect('/');
 });
