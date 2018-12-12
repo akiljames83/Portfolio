@@ -75,9 +75,9 @@ app.post("/", function(req, res){
     
     //mailOptions.from = email;
     //mailOptions.to = 'akil.james83@gmail.com';//email;
-    mailOptions.html = print;
+    //mailOptions.html = print;
     
-    sendit();
+    //sendit();
     //req.flash('success', 'Message sent successfully!');
     res.redirect('/');
 });
